@@ -15,7 +15,10 @@ dependencies = [
 [dependency-groups]
 dev = [
     "black>=25.9.0",
+    "commitizen>=4.9.1",
+    "isort>=7.0.0",
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
     "ruff>=0.14.1",
+    "rust-just>=1.43.0",
 ]

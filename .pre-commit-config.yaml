@@ -1,0 +1,36 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+    -   id: trailing-whitespace
+        name: Remove trailing whitespace
+    -   id: end-of-file-fixer
+        name: Ensure file ends with a newline
+    -   id: check-yaml
+        name: Check yaml files for syntax errors
+    -   id: check-added-large-files
+        name: Prevent adding large files
+        args: ['--maxkb=500']
+-   repo: https://github.com/pycqa/isort
+    rev: 7.0.0
+    hooks:
+      - id: isort
+        name: Sort Python imports
+-   repo: https://github.com/psf/black
+    rev: 25.9.0
+    hooks:
+    - id: black
+      language_version: python3.12
+      name: Black code formatter
+-   repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.9.1
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+        name: Commit message linter
+-   repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.9.4
+    hooks:
+      - id: uv-lock
+        name: Ensure uv.lock is up to date
